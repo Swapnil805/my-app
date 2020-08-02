@@ -1,0 +1,22 @@
+<!-- <div class="container">
+  <div class="main">  
+    <button class="btn btn-danger" (click)="showsecret = !showsecret">Display Details</button>
+    <button class="btn btn-danger" (click)="show()">Display Details</button>
+    <hr>
+    <p *ngIf="showsecret">Secret password = tuna</p>
+    <div *ngFor = "let logs of log"
+     [ngStyle]="{backgroundColor : logs >=5?'blue':'transparent'}"
+     [ngClass]="{wh : logs >=5}">
+     {{logs}} time</div>   
+  </div>
+</div>
+ -->
+<app-header (featureSelected)="onNavigate($event)"></app-header>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <app-recipes *ngIf="loadedfeature === 'recipe'"></app-recipes>
+      <app-shopping-list *ngIf="loadedfeature !== 'recipe'"></app-shopping-list>
+    </div>
+  </div>
+</div>
